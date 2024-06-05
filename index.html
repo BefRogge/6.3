@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Тест</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .answers {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .answers li {
+            margin-bottom: 10px;
+        }
+
+        .answers input[type="radio"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="question">
+    <h2>Скільки буде 4х4?</h2>
+    <ul class="answers">
+        <li><input type="radio" name="question1" value="a"> a) 120</li>
+        <li><input type="radio" name="question1" value="b"> b) -0 </li>
+        <li><input type="radio" name="question1" value="c"> c) 16</li>
+    </ul>
+</div>
+
+<button onclick="checkAnswer()">Перевірити</button>
+
+<script>
+    function checkAnswer() {
+        if (document.querySelector('input[name="question1"]:checked').value === 'c') {
+            alert('Вірно!Молодець ви перейшли в 3 клас');
+        } else {
+            alert('Видно що в тебе випало з сумки знання за 2 клас');
+        }
+    }
+
+</script>
+
+</body>
+</html>
